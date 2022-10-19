@@ -1,9 +1,10 @@
 {% extends '_base.html' %}
+{% load static %}
 
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-<h1>Homepage</h1>
+<a href="{% url 'about' %}">About</a>
 {% if user.is_authenticated %}
 <p>Hi {{user.username}}</p>
 <a href="{% url 'logout' %}">Log out</a>
@@ -14,4 +15,8 @@
 <br>
 <a href="{% url 'signup' %}">Sign Up</a>
 {% endif %}
+<!--javascript-->
+{% block javascript %}
+<!--<script src="{% static 'js\base.js' %}"></script>-->
+{% endblock javascript %}
 {% endblock content %}
