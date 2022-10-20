@@ -7,13 +7,13 @@
 <a href="{% url 'about' %}">About</a>
 {% if user.is_authenticated %}
 <p>Hi {{user.username}}</p>
-<a href="{% url 'logout' %}">Log out</a>
+<a href="{% url 'account_logout' %}">Log out</a>
 {% else %}
 <p>You are not logged in.</p>
-<a href="{% url 'login' %}">Log In</a>
+<a href="{% url 'account_login' %}">Log In</a>
 <br>
 <br>
-<a href="{% url 'signup' %}">Sign Up</a>
+<a href="{% url 'account_signup' %}">Sign Up</a>
 {% endif %}
 <!--javascript-->
 {% block javascript %}
