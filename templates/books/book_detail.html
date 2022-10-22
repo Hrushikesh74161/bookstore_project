@@ -8,4 +8,11 @@
     <p>Author: {{book.author}}</p>
     <p>Price: {{book.price}}</p>
 </div>
+<h2><b>Reviews:</b></h2>
+<div class="reviews">
+    {% for review in book.reviews.all %}
+    <p>{{review.review}}</p>
+    <p>-- {{review.author}}</p>
+    {% endfor %}
+</div>
 {% endblock content %}
