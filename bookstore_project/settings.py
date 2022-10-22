@@ -30,13 +30,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # required for allauth
     'django.contrib.sites',  # new
+
     # 3rd party
     'allauth',
     'allauth.account',
+
     # local
     'users.apps.UsersConfig',  # new
     'pages.apps.PagesConfig',  # new
+    'books.apps.BooksConfig',  # new
 ]
 
 
