@@ -15,7 +15,7 @@ class ReviewAdmin(admin.ModelAdmin):
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
-    list_diplay = ("title", "author", "price",)
+    list_diplay = ("title", "author", "price", 'cover',)
     inlines = [
         ReviewInline
     ]

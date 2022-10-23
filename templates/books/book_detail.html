@@ -4,6 +4,9 @@
 
 {% block content %}
 <div class="book-detail">
+    {% if book.cover %}
+    <img src={{book.cover.url}} alt="{{book.title}}" width="210" height="270">
+    {% endif %}
     <h2><a>{{book.title}}</a></h2>
     <p>Author: {{book.author}}</p>
     <p>Price: {{book.price}}</p>
